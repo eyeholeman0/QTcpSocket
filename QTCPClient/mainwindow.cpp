@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
         [=](QAbstractSocket::SocketError socketError){displayError(socketError);});
 
 
-    socket->connectToHost(/*"DESKTOP-FMQRPG7"*/"172.16.37.80"/*QHostAddress::LocalHost*/,8080);
+    socket->connectToHost(/*"DESKTOP-FMQRPG7"*/"127.0.0.1"/*QHostAddress::LocalHost*/,8080);
 
     if(socket->waitForConnected())
         ui->statusBar->showMessage("Connected to Server");
